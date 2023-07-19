@@ -20,7 +20,7 @@ function App() {
   <>
   <img src= 'logo.png ' alt=''></img>
   {/* /* nosso cabecalho com uma propiedade chamada titulo */}
-    <Cabecalho logo="logo192.png" titulo="Fav.io" subtitulo="O melhor gerenciador de favoritos da Internet inteira Brasileira!!"/>
+    <Cabecalho logo="logo192.png" titulo="Fav.io" subtitulo="O melhor gerenciador de favoritos do mundo!!"/>
   
     <Conteudo/>
     <Rodape/>
