@@ -1,8 +1,13 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+
+}
 .titulo{
     font-size: 3rem;
     color: rebeccapurple;
     background-color: pink;
 }
 .subtitulo{
-    
+    font-size: 2rem;
 }
