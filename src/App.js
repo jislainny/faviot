@@ -5,6 +5,7 @@ import Conteudo,{OlaMundo} from './componentes/Conteudo';
 import Rodape from './componentes/Rodape'
 
 
+
 /*Arquivo App JSX 
 Componente funcional = Porque ele é uma função
 */ 
@@ -18,9 +19,10 @@ function App() {
 
   /** O react substitui o classname por class pq o class é palavra reservada do JS */
   <>
-  <img src= 'logo.png ' alt=''></img>
+  <img src='' alt=''></img>
   {/* /* nosso cabecalho com uma propiedade chamada titulo */}
-    <Cabecalho logo="logo192.png" titulo="Fav.io" subtitulo="O melhor gerenciador de favoritos do mundo!!"/>
+    <Cabecalho img logo="favorito.png " titulo="O FAVORITO" subtitulo="O MAIS LUXUOSO!!"  />
+    
   
     <Conteudo/>
     <Rodape/>

@@ -2,13 +2,65 @@
     display: flex;
     justify-content: space-around;
     background-color: blue;
+    align-items: center;
+
 
 }
 .titulo{
-    font-size: 3rem;
-    color: rgb(209, 116, 218);
-    background-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    justify-content: center;
+  
+   
 }
 .subtitulo{
     font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+justify-content: center;
+
+  
+   
 }
+.logo{
+    width: 200px;
+    height: 200px;;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin: 0 20px;
+  }
+  
+  .menu li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu li a:hover {
+    background-color: #000000;
+  }
