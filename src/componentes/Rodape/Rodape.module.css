@@ -1,3 +1,9 @@
+.date{
+
+    bottom: 5px; 
+    color: rgb(127, 200, 255);
+}
+
 footer {
     background-color: #110f0f; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto no rodapé */
@@ -10,3 +16,4 @@ footer {
 
    
   }
+  

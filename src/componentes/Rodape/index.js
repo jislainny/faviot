@@ -5,7 +5,20 @@ import styles from './Rodape.module.css'
 
 
 export default function Rodape() {
+  function getToday() { 
+    var today = new Date(); 
+   
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+    var dd = String(today.getDate()).padStart(2, '0'); 
+    var yyyy = today.getFullYear(); 
+   
+  
+    today = dd + '/' + mm + '/' + yyyy; 
+    return today 
+  }
+
   return (
+
     
 <footer>
      <div className='Rodape'>Rodapé
@@ -15,15 +28,12 @@ export default function Rodape() {
     <li><FaTwitter/>TWITER</li>
      </ul>
      </div>
+     <p className={styles.date}>{getToday()}</p>
+    
     </footer>
+    
   )
 }
 
-const CurrentDate = () => {
-  const currentDate = new Date().toLocaleDateString(); // Obtém a data corrente no formato de data local
-
-  return <div>{currentDate}</div>;
-
-};
 
 
