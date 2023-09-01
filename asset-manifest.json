@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/faviot/static/css/main.bf33969c.css",
+    "main.js": "/faviot/static/js/main.dc485136.js",
+    "static/js/787.2e76fdd1.chunk.js": "/faviot/static/js/787.2e76fdd1.chunk.js",
+    "index.html": "/faviot/index.html",
+    "main.bf33969c.css.map": "/faviot/static/css/main.bf33969c.css.map",
+    "main.dc485136.js.map": "/faviot/static/js/main.dc485136.js.map",
+    "787.2e76fdd1.chunk.js.map": "/faviot/static/js/787.2e76fdd1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf33969c.css",
+    "static/js/main.dc485136.js"
+  ]
+}
