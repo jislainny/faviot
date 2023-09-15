@@ -1,7 +1,7 @@
 
 import './App.css';
 import Cabecalho from './componentes/Cabecalho'
-import Conteudo,{OlaMundo} from './componentes/Conteudo';
+import Conteudo from './componentes/Conteudo'
 import Rodape from './componentes/Rodape'
 
 
@@ -11,7 +11,7 @@ Componente funcional = Porque ele é uma função
 */ 
 function App() {
 
-  OlaMundo();
+
 
 /* Todo componente deve retornar um html entre parenteses*/
 
@@ -30,7 +30,8 @@ function App() {
     
 
     </>
-  );
-}
+  
+);
+  }
 
 export default App;

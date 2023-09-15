@@ -1,11 +1,22 @@
 import React from 'react'
+import { FaVaadin } from 'react-icons/fa'
 
-export default function Conteudo() {
+const Conteudo = () => {
   return (
-    <div>Conteudo</div>
+    <div>Conteudo
+      <form onSubmit={()=>alert("Favorito salvo")}>
+        <label>
+          Nome do site
+        </label>
+        <input name='nome_site'/> 
+        <label>
+          URL
+        </label>
+        <input name='url' /> 
+      </form>
+
+    </div>
   )
 }
 
-export function OlaMundo(){
-    console.log("Ola mundo")
-}
+export default Conteudo
