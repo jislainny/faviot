@@ -1,37 +1,26 @@
-
 import './App.css';
 import Cabecalho from './componentes/Cabecalho'
+import Rodape from './componentes/Rodape';
 import Conteudo from './componentes/Conteudo'
-import Rodape from './componentes/Rodape'
 
 
-
-/*Arquivo App JSX 
+/*
+Arquivo App JSX
 Componente funcional = Porque ele é uma função
-*/ 
+*/
 function App() {
 
-
-
-/* Todo componente deve retornar um html entre parenteses*/
-
+  /*Todo componente deve retornar um html entre parenteses*/
   return (
-
-  /** O react substitui o classname por class pq o class é palavra reservada do JS */
-  <>
-  <img src='' alt=''></img>
-  {/* /* nosso cabecalho com uma propiedade chamada titulo */}
-    <Cabecalho img logo="favorito.png " titulo="O FAVORITO" subtitulo="O MAIS LUXUOSO!!"  />
-    
-  
+    /*O React substitui className por class pq class é palavra reservada do JS*/
+    <>
+    {/* Nosso cabecalho tem uma propriedade chamada titulo */}
+    <Cabecalho logo="favorito.png" titulo="FAVORITO" subtitulo="O MELHOR PARA VOCÊ!!"/>
     <Conteudo/>
+    {/* <Estados/> */}
     <Rodape/>
-    
-    
-
     </>
-  
-);
-  }
+  );
+}
 
 export default App;
