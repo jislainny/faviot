@@ -2,6 +2,8 @@ import './App.css';
 import Cabecalho from './componentes/Cabecalho'
 import Rodape from './componentes/Rodape';
 import Conteudo from './componentes/Conteudo'
+import CadastroUsuario from './componentes/CadastroUsuario';
+import LoginUsuario from './componentes/LoginUsuario';
 
 
 /*
@@ -16,7 +18,9 @@ function App() {
     <>
     {/* Nosso cabecalho tem uma propriedade chamada titulo */}
     <Cabecalho logo="favorito.png" titulo="FAVORITO" subtitulo="O MELHOR PARA VOCÊ!!"/>
-    <Conteudo/>
+   <CadastroUsuario/>
+   <LoginUsuario/>
+    {/* <Conteudo/> */}
     {/* <Estados/> */}
     <Rodape/>
     </>

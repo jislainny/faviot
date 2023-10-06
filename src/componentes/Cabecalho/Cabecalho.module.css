@@ -1,7 +1,7 @@
 .cabecalho{
     display: flex;
     justify-content: space-around;
-    background-color: blue;
+    background-color: pink;
     align-items: center;
 
 
@@ -54,7 +54,7 @@ body {
   }
   
   .menu li a {
-    color: #000000;
+    color: rebeccapurple;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
@@ -62,5 +62,5 @@ body {
   }
   
   .menu li a:hover {
-    background-color: #000000;
+    background-color: black;
   }
