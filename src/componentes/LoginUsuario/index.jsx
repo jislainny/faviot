@@ -1,45 +1,55 @@
 import React from 'react'
+import styles from './Login.module.css'
 import { useState } from 'react';
 
-const LoginUsuario = () => {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+function LoginUsuario() {
+    const [emailUsuario, setEmailUsuario] = useState("")
+    const [senhaUsuario, setSenhaUsuario] = useState("")
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log('Tentativa de login com os seguintes dados:');
-    console.log('Email:', email);
-    console.log('Senha:', senha);
-  };
+    function confimeSuaSenha() {
+        let usuario = JSON.parse(localStorage.getItem('usuario'))
+        
+        let emailCadastrado = usuario.emailUsuario
+        let senhaCadastrada = usuario.senhaUsuario
 
-  return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label form="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Digite seu email"
-          />
+        if(emailCadastrado === emailUsuario && senhaCadastrada === senhaUsuario) {
+            alert("Seja bem vindo ao site!!")
+        }else{
+            alert("Senha ou email incorretos")
+        }
+    }
+
+    return (
+        <div className={styles.container}>
+         <h2>Login</h2>
+            <form className={styles.form}>
+            <div/>
+            <label>Email:</label>
+            <input
+                type='text'
+                name="emailUsuario"
+                onChange={(e)=> setEmailUsuario(e.target.value)}
+            ></input>
+            <div/>
+
+            <div/>
+            <label>Senha:</label>
+            <input
+                type='password'
+                name="senhaUsuario"
+                onChange={(e=> setSenhaUsuario(e.target.value))}
+            ></input>
+             <div/>
+
+            <input
+                type="button"
+                value="Login"
+                onClick={()=> confimeSuaSenha()}
+            />
+            </form>
         </div>
-        <div>
-          <label form="senha">Senha:</label>
-          <input
-            type="password"
-            id="senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            placeholder="Digite sua senha"
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
-};
+    );
+}
+
 
 export default LoginUsuario;

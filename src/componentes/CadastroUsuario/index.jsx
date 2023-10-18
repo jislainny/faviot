@@ -1,81 +1,73 @@
 import React from 'react'
+import styles from './Cadastro.module.css'
 import { useState } from 'react';
 
-const CadastroUsuario =() => {
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [confirmarSenha, setConfirmarSenha] = useState('');
+function CadastroUsuario() {
 
+  const [nomeUsuario, setNomeUsuario] = useState("")
+  const [emailUsuario, setEmailUsuario] = useState("")
+  const [senhaUsuario, setSenhaUsuario] = useState("")
+  const [senhaConfirmarSenha, setConfirmarSenha] = useState("")
 
-    console.log('Nome:', nome);
-    console.log('Email:', email);
-    console.log('Senha:', senha);
-    console.log('ConfirmarSenha:', confirmarSenha);
- 
+  function salvarUsuario(nomeUsuario, emailUsuario, senhaUsuario) {
+    let usuario = {nomeUsuario, emailUsuario, senhaUsuario}
+    console.log(usuario)
+    localStorage.setItem("usuario", JSON.stringify (usuario))
+  }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    
-        if (!nome || !email || !senha || !confirmarSenha) {
-          alert('Por favor, preencha todos os campos.');
-          return;
-        }
-    
-        if (senha !== confirmarSenha) {
-          alert('As senhas não coincidem. Tente novamente.');
-          return;
-        }
-}
-  return (
+  function validarSenha(senhaUsuario, senhaConfirmarSenha) {
+    if(senhaUsuario !== senhaConfirmarSenha) {
+      alert("As senhas não coincidem. Por favor tente novamente.")
+    }else{
+      salvarUsuario(nomeUsuario,emailUsuario, senhaUsuario)
+    }
 
-    <div>
-      <h2>Cadastro de Usuário</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label form="nome">Nome:</label>
-          <input
-            type="text"
-            id="nome"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            placeholder="Digite seu nome"
-          />
-        </div>
-        <div>
-          <label form="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Digite seu email"
-          />
-        </div>
-        <div>
-          <label form="senha">Senha:</label>
-          <input
-            type="password"
-            id="senha"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
-            placeholder="Digite sua senha"
-          />
-        </div>
-        <div>
-          <label form="confirmarSenha">Confirme sua senha:</label>
-          <input
-            type="password"
-            id="confirmarSenha"
-            value={confirmarSenha}
-            onChange={(e) => setConfirmarSenha(e.target.value)}
-            placeholder="Confirme sua senha"
-          />
-        </div>
-        <button type="submit">Registrar</button>
+  }
+
+  return(
+    <div className={styles.container}>
+      <h2>Cadastro</h2>
+      <form className={styles.form}>
+      <div/>
+      <label>Nome:</label>
+      <input
+        type='text'
+        name='nomeUsuario'
+        onChange={(e)=> setNomeUsuario(e.target.value)}
+      ></input>
+      <div/>
+
+      <div/>
+      <label>Email:</label>
+      <input
+        type='email'
+        name='emailUsuario'
+        onChange={(e)=> setEmailUsuario(e.target.value)}
+      ></input>
+       <div/>
+       
+       <div/>
+      <label>Senha:</label>
+      <input
+        type='password'
+        name='senhaUsuario'
+        onChange={(e)=> setSenhaUsuario(e.target.value)}
+      ></input>
+       <div/>
+
+       <div/>
+      <label>Confirmar Senha:</label>
+      <input
+        type='password'
+        name='senhaConfirmarSenha'
+        onChange={(e)=> setConfirmarSenha(e.target.value)}
+      ></input><div/>
+      <input type="button" value="Salvar" 
+          onClick={()=> validarSenha(senhaUsuario, senhaConfirmarSenha)}  />
+      
       </form>
     </div>
   );
-};
+}
 
 export default CadastroUsuario;
